@@ -1,46 +1,42 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../style/CSS/styleQiuz.css">
-
-
-
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./styleHTMLQuiz.css">
+    <title>Document</title>
 </head>
-
 <body>
+  <div class="m-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar1" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link active ">Home</a>
+                    
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown" >Quizzes</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JavaScript</a>
+                        </div>
+                    </div>
 
-
-  <nav>
-    <div id="navBar">
-      <a href="" style="text-decoration:none; color: black; margin:0 25px " id="Home">Home</a>
-
-
-      <!-- *******Start Navbar******* -->
-
-      <div class="dropdown">
-
-        <span>Quizzes<i class="fa-solid fa-circle-chevron-down"></i></span>
-        <div class="dropdown-content">
-          <a href="">
-            <p style="color: black;"><i class="fa-brands fa-html5"></i>HTML</p>
-          </a>
-          <a href="">
-            <p style="color: black;"><i class="fa-brands fa-css3-alt"></i>CSS</p>
-          </a>
-          <a href="">
-            <p style="color: black;"><i class="fa-brands fa-js"></i>Javascript</p>
-          </a>
-
+                </div>
+                
+            </div>
         </div>
-      </div>
-  </nav>
+    </nav>
+</div>
   <!-- *******End Navbar******* -->
-
- <!--********Start Quiz Zone (Main)********-->
   <div id="bordeer">
     <div class="container mt-5">
       <div class="d-flex justify-content-center row">
@@ -49,64 +45,51 @@
             <div class="question bg- p-3 border-bottom" style="background-color: rgba(236, 19, 19, 0.814);">
               <div class="d-flex flex-row justify-content-between align-items-center mcq">
 
-                <h4 class="small-nav">HTML-Quiz</h4> <span>(5 of 10)</span>
+                <h4 class="small-nav">HTML-Quiz</h4> <span id="quisnum"></span>
 
               </div>
             </div>
-
-
             <div class="question bg-white p-3 border-bottom">
               <div class="d-flex flex-row align-items-center question-title">
                 <h3 class="text-danger">Q.</h3>
-                <h5 class="mt-1 ml-2">It is a long established fact that a reader will be distracted by the readable
-                  content ?</h5>
+                <div id="QuizContainer">
+                  <p id="questions">questions</p>
               </div>
-
-
-              <div class="ans ml-2">
-                <label class="radio"> <input type="radio" name="Lorem" value=""> <span>Lorem</span>
-                </label>
-              </div>
-
-
-              <div class="ans ml-2">
-                <label class="radio"> <input type="radio" name="Lorem" value=""> <span>Lorem</span>
-                </label>
-              </div>
-
-
-              <div class="ans ml-2">
-                <label class="radio"> <input type="radio" name="Lorem" value=""> <span>Lorem</span>
-                </label>
-              </div>
-
-
-              <div class="ans ml-2">
-                <label class="radio"> <input type="radio" name="Lorem" value=""> <span>Lorem</span>
-                </label>
-              </div>
-            </div>
-
- <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
-
-              <button class="btn btn border-success align-items-center btn-success" type="button"
-                style="background-color:rgba(236, 19, 19, 0.814); border: rgba(236, 19, 19, 0.814);">Next
-                <i class="fa fa-angle-right ml-2"></i></button>
-
             </div>
           </div>
+     
+    
+        <div class="d-flex flex-row  align-items-center p-3 bg-white" id="AnswersDiv" style="margin-left: -25px;">
+          <div class="ans ml-2" >
+            <button id="answer1" >answer1</button></div>
+         <div class="ans ml-2">
+         <button id="answer2" >answer2</button>
         </div>
-      </div>
+        <div class="ans ml-2"><button id="answer3" >answer3</button>
+        </div>
+        <div class="ans ml-2"><button id="answer4" >answer4</button>
+        </div></div>
+        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+        <!--**Next button-->
+        <button class="btn btn-next col-lg-2" type="submit"><a id="nxtBtn">Next</a></button>
+        <div class="col-lg-4">
+          <div class="counter"  class="timer" >
+            <div><span id="time">03:00</span> </div>
+          </div>
+        </div></div>
     </div>
+   
   </div>
+  
+</div>
 
-  <!--********End Quiz Zone********-->
- 
+
+    </div>
+    <script src="./appHTMLQuiz.js"></script>
 
 
-<!--********Count-Down Timer********-->
 
-  <p id="demo"></p>
+  <p id="Timer"></p>
 
 
   <!--********Start Footer********-->
@@ -191,7 +174,7 @@
           </div>
         </div>
         <div class="text-center p-3" style="background-color: rgba(233, 233, 233, 0.2);">
-          © 2022 Copyright:
+          Â© 2022 Copyright:
           <a class="text-dark" href="#">Quizooo</a>
         </div>
         <!-- Copyright -->
@@ -199,10 +182,5 @@
     
     </div>
   </body>
-
   <!--********End Footer********-->
-
-</body>
-<script src="/appTimer.js"></script>
-
 </html>

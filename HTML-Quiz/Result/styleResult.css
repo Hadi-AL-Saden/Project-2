@@ -3,6 +3,9 @@ body
   background-color: rgba(255, 255, 255, 0.83)
 }
 
+#result{
+  margin-left: 40%;
+}
 @media only screen and (max-width: 320px)
  {
   body 
@@ -12,7 +15,7 @@ body
 }
 
 
-/********Navbar********/
+/**Navbar**/
 
 #navBar
 {
@@ -54,7 +57,7 @@ display: block;
 
 
 
-/********Main********/
+/**Main**/
 
 .border
 {
@@ -111,6 +114,12 @@ label.radio input:checked+span
   outline: 0 !important;
   box-shadow: none !important
 }
+.navbar1
+{
+    margin-left:43%;
+    text-align: center;
+
+}
 
 
 @media only screen and (max-width: 320px)
@@ -122,7 +131,7 @@ label.radio input:checked+span
 }
  
 
-/*********Fotter Navbar*********/
+/**Fotter Navbar**/
 
 
 
@@ -133,5 +142,3 @@ label.radio input:checked+span
     font-size:9vw;
   }
 }
-
-

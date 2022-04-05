@@ -5,134 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/style/CSS/stylePass.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="./styleResult.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
     <script src="https://kit.fontawesome.com/41d0e79cb4.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
-    
-
-
 </head>
 <body>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
 </head>
-
 <body>
-  
   <div id="gradient"/>
-
-    <header>
-
-      <div class="m-4">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse navbar1" id="navbarCollapse">
-                    <div class="navbar-nav">
-                        <a href="#" class="nav-item nav-link active "  >Home</a>
-                        
-                        <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown" >Quizzes</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">HTML</a>
-                                <a href="#" class="dropdown-item">CSS</a>
-                                <a href="#" class="dropdown-item">JavaScript</a>
-                            </div>
+    <header>  
+  <div class="m-4">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse navbar1" id="navbarCollapse">
+                <div class="navbar-nav">
+                    <a href="#" class="nav-item nav-link active">Home</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle " data-bs-toggle="dropdown" >Quizzes</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">HTML</a>
+                            <a href="#" class="dropdown-item">CSS</a>
+                            <a href="#" class="dropdown-item">JavaScript</a>
                         </div>
-    
                     </div>
-                    
                 </div>
             </div>
-        </nav>
-    </div>
-
-<!-- ********************************************************************************** -->
-
-
-
-
-
-<!-- ********************************************************************************** -->
-
-<div class="continer">
-    <div class="row">
- <img src="/img/pH1w1bvv_400x400.png" id="pass"  alt=""><br>
- <button type="button" class="btn btn-success" style="margin-left: 48%;">Show-answer</button>
- 
+        </div>
+    </nav>
 </div>
-</div>
-
 </header>
+<div id="result"style="margin-left: 40%;margin-top: 3%; ">
+<div >
+  <img id="pass or failed" alt="" style="width: 400px; height: 400px;">
+</div></div>
+  <p id="score" style="text-align: center;"></p>
+
+  <div>
+  <button type="button" class="btn btn-success" style="margin-left: 48%;" onclick="myFunction1()">Show-answer</button>
+ </div>
 <!-- ******************************************************************** -->
     <main>
-    
-        <table border="1"  id="table">
-            <thead>
-                <tr>
-                    <td>
-                         <p>hadi</p>
-                    </td>
-                    <td>
-                        <p>hadi</p>
-                    </td>                  
-                    </tr>
- 
-            </thead>
+    <table id="table" border="2px">
+   
+    </table>
+       
+<a href="../../HTML/index.html"><button type="button" class="btn btn-success" style="margin-left: 48%;margin-top: 3%;" >Home-Page</button></a>
             
-            <tbody>
-                <tr>
-                    <td>
-                        <h3>Q-1</h3>
-                    </td>
-                    <td>
-                        <span></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3>Q-1</h3>
-                    </td>
-                    <td>
-                        <span></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3>Q-1</h3>
-                    </td>
-                    <td>
-                        <span></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3>Q-1</h3>
-                    </td>
-                    <td>
-                        <span></span>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <h3>Q-1</h3>
-                    </td>
-                    <td>
-                        <span></span>
-                    </td>
-                </tr>
-            </tbody>
-            
-            </table>
-<a href="/HTML/index.html"><button type="button" class="btn btn-success" style="margin-left: 48%;margin-top: 3%;" >Home-Page</button></a>
-            
-
-
-
     </main>
     <!-- ******************************************************************** -->
 
@@ -213,7 +137,7 @@
           </div>
         </div>
         <div class="text-center p-3" style="background-color: rgba(233, 233, 233, 0.2);">
-          © 2022 Copyright:
+          Â© 2022 Copyright:
           <a class="text-dark" href="#">Quizooo</a>
         </div>
         <!-- Copyright -->
@@ -223,5 +147,5 @@
   </body>
 </body>
 
-<script src="../app.js"></script>
+<script src="./appResult.js"></script>
 </html>
