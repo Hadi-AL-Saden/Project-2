@@ -1,6 +1,8 @@
 'use strict';
 
 let loginemail=document.getElementById("email");
+let emailError=document.getElementById("email-error")
+let password=document.getElementById("Password-error")
 let loginpass=document.getElementById("password");
 
 function GetDataFromLocalStorage(){
@@ -9,16 +11,16 @@ function GetDataFromLocalStorage(){
 
 
     if (loginemail.value == parsData[0].email){
-        alert("your email is correct");
+      emailError.innerHTML="your email is correct";
     
     if(loginpass.value == parsData[0].password){
        
-        alert("your pass is correct"); 
+        password.innerHTML="your pass is correct"; 
          document.getElementById("submit").innerHTML="submit";
-        window.location="./HTML/index.html";
+        window.location.href="../HTML/index.html";
     }
         else{
-            alert(" your pass is wrong");
+         password.innerHTML=" your pass is wrong";
         }
        
     }};

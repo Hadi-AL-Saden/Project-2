@@ -26,12 +26,11 @@ localStorage.setItem('formData',array);
 function regForm(fname,Uname,email,password,spassword){
 this.fname=fname;
 this.FullName=fullName(this.fname);
-console.log(this.FullName);
 this.Uname=Uname;
 this.email=email;
+this.correctemail=correctEmail(this.email);
 this.password=password;
 this.spassword=spassword;
-this.correctemail=correctEmail(this.email);
 this.correctPssword=check_pass(this.password,this.spassword);
 info.push(this);
 renderInfo();
@@ -47,7 +46,6 @@ function fullName(fname){
         return 'Correct'; 
     }
     else{
-        console.log('incorrent');
         return 'Invalivd Name';
     }
 }
@@ -59,44 +57,28 @@ function correctEmail(email){
     const emailRegexp = new RegExp(
       /^[a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1}([a-zA-Z0-9][\-_\.\+\!\#\$\%\&\'\*\/\=\?\^\`\{\|]{0,1})*[a-zA-Z0-9]@[a-zA-Z0-9][-\.]{0,1}([a-zA-Z][-\.]{0,1})*[a-zA-Z0-9]\.[a-zA-Z0-9]{1,}([\.\-]{0,1}[a-zA-Z]){0,}[a-zA-Z0-9]{0,}$/i
     )
-  
     emailRegexp.test(email);
     let result ='your Email is Correct' ;
     return result;
   }
-  // function validate() {
-  //   let result = $("#result");
-  //   let email = $("#email").val();
-  //   result.text("");
-  //   if(validateEmail(email)) {
-  //     result.text(email + " is valid");
-  //     result.css("color", "blue");
-  //   } else {
-  //     result.text(email + " is not valid");
-  //     result.css("color", "red");
-  //   }
-  //   return false;
-  // }
 
 function check_pass(password,spassword) {
-   
   if (password != spassword) {
     console.log(false); 
+    PasswordError.style.color="red";
     return PasswordError.innerText ='your password dose not match !' ;
-    //  PasswordError.css("color", "red");
+   
        
     } else {
       console.log(true); 
-      return PasswordError.innerText  = 'your password match';
-      // PasswordError.css("color", "green");
-      
+      PasswordError.style.color="green";
+      return PasswordError.innerText  = 'your password match';      
     }
 }
 
 myInput.onfocus = function() {
     document.getElementById("message").style.display = "block";
   }
-  
   // When the user clicks outside of the password field, hide the message box
   myInput.onblur = function() {
     document.getElementById("message").style.display = "none";
@@ -104,7 +86,6 @@ myInput.onfocus = function() {
   
   // When the user starts to type something inside the password field
   myInput.onkeyup = function() {
-    // Validate lowercase letters
     var lowerCaseLetters = /[a-z]/g;
     if(myInput.value.match(lowerCaseLetters)) {  
       letter.classList.remove("invalid");
@@ -147,16 +128,15 @@ myInput.onfocus = function() {
 
 
 regFormx.addEventListener('submit', handelSubmit);
-function handelSubmit(e){
-    e.preventDefault();
-    let fname=e.target.fname.value;
-    let Uname=e.target.Uname.value;
-    let email=e.target.email.value;
-    let password=e.target.password.value;
-    let spassword=e.target.spassword.value;
+function handelSubmit(event){
+    event.preventDefault();
+    let fname=event.target.fname.value;
+    let Uname=event.target.Uname.value;
+    let email=event.target.email.value;
+    let password=event.target.password.value;
+    let spassword=event.target.spassword.value;
     new regForm(fname,Uname,email,password,spassword); //Calling The Constructer
-    document.getElementById('link').innerHTML="submit";
-    window.location="../Login/indexLogin.html";
+    document.getElementById('link').href="../Login/indexLogin.html";
 }
 handelSubmit();
 
