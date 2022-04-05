@@ -6,11 +6,14 @@ function GetDataFromLocalStorage(){
 
 }
 GetDataFromLocalStorage();
-getName(parsData);
+
+
 function getName(parsData){
+    console.log(parsData[0].fname);
     parsData.map(function(i){
 
-        Name.innerHTML=`${parsData[i].fname}`;
+        Name.innerHTML=`${i.fname}`;
     })
 
 }
+
