@@ -10,14 +10,17 @@ compare the answers with the correct answers, which was previously saved on loca
 ### Hadi AlSaden
 hadialsaden@gmail.com
 #### [Hadi's GitHub Link](https://github.com/Hadi-AL-Saden)
+#### [Hadi's  Linkedin ](https://www.linkedin.com/in/hadi-alsaden-174408232/)
 
 ### Saja Al Ghalayini
 saja.ghalayini02@gmail.com
 #### [Saja's GitHub Link](https://github.com/saja-alghalayini)
+#### [Saja's  Linkedin ](www.linkedin.com/in/saja-al-ghalayini)
 
 
 ### Samar Alkhamis
  SamarAlkhamiss@gmail.com
 #### [Samar's GitHub Link](https://github.com/samaralkhamis)
+#### [Samar's  Linkedin ](https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile)
 
 ![Layer_52 ](https://user-images.githubusercontent.com/100213822/161449919-aeee6974-cd06-4ccf-aeec-e6f67c997389.png)
