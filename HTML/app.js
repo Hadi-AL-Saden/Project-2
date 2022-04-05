@@ -1,10 +1,16 @@
-let Name=document.getElementById("Name")
+let Name=document.getElementById("Name");
 function GetDataFromLocalStorage(){
     let storageData=localStorage.getItem('formData');
     let parsData=JSON.parse(storageData);
     getName(parsData);
+
 }
+GetDataFromLocalStorage();
 getName(parsData);
 function getName(parsData){
-Name.innerHTML=`${parsData[0].fname}`
+    parsData.map(function(i){
+
+        Name.innerHTML=`${parsData[i].fname}`;
+    })
+
 }
