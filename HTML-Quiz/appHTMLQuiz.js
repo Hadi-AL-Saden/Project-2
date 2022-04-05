@@ -42,7 +42,7 @@ let jsQuiz = [{
     questionnumber:"5 of 10"
 }, {
     questions: "Which character is used to indicate an end tag?",
-    choices: ["", "", "/", "*"],
+    choices: ["+", "=", "/", "*"],
     correctAnswer:"/",
     questionnumber:"6 Of 10"
 }, {
