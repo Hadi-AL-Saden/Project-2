@@ -103,7 +103,7 @@ function checkAnswer(userAnswers){
 function showNextQuestion(){
     if(XQuestion==JsQuiz.length-1){
         nxtBtn.style.display='block'; 
-        nxtBtn.href="./reuslt css/indexResult.html";
+        nxtBtn.href="./Result/indexResult.html";
     }
     else{
         enableButton();
