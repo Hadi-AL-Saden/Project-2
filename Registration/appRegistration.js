@@ -5,6 +5,7 @@ let firstNameError=document.getElementById('fname-error');
 let UesrNameError=document.getElementById('Uname-error');
 let Email=document.getElementById('email');
 let EmailError= document.getElementById('email-error');
+let quizoptions=document.getElementById("quizoptions");
 let regFormx=document.getElementById('regs_form');
 
 /* password*/ 
@@ -15,29 +16,32 @@ let capital = document.getElementById("capital");
 let number = document.getElementById("number");
 let length = document.getElementById("length");
 let info=[];
- /*LocalStorage */
 
 function LocalStorageFrom(){
 let array=JSON.stringify(info);
 localStorage.setItem('formData',array);
 } 
 
-/*Regestration Constructor */
-function regForm(fname,Uname,email,password,spassword){
+function regForm(fname,Uname,email,password,spassword,quizoptions){
 this.fname=fname;
 this.FullName=fullName(this.fname);
 this.Uname=Uname;
 this.email=email;
 this.correctemail=correctEmail(this.email);
+this.quizoptions=quizoptions;
+console.log(this.quizoptions);
 this.password=password;
 this.spassword=spassword;
 this.correctPssword=check_pass(this.password,this.spassword);
 info.push(this);
 renderInfo();
 LocalStorageFrom()
+if(this.fname,this.Uname,this.email,this.quizoptions,this.password){
+  info.push(this);
 }
 
-/* To return The full name  */
+}
+
 function fullName(fname){
     let x;
     let regex = /[a-zA-Z\s]+$/;
@@ -79,7 +83,6 @@ function check_pass(password,spassword) {
 myInput.onfocus = function() {
     document.getElementById("message").style.display = "block";
   }
-  // When the user clicks outside of the password field, hide the message box
   myInput.onblur = function() {
     document.getElementById("message").style.display = "none";
   }
@@ -133,10 +136,12 @@ function handelSubmit(event){
     let fname=event.target.fname.value;
     let Uname=event.target.Uname.value;
     let email=event.target.email.value;
+    let quizoptions=event.target.quizoptions.value;
+    console.log(quizoptions);
     let password=event.target.password.value;
     let spassword=event.target.spassword.value;
-    new regForm(fname,Uname,email,password,spassword); //Calling The Constructer
-    document.getElementById('link').href="../Login/indexLogin.html";
+    new regForm(fname,Uname,email,password,spassword,quizoptions); 
+    document.getElementById("link").href="../Login/indexLogin.html" ;
 }
 handelSubmit();
 
@@ -147,5 +152,6 @@ function renderInfo(){
     EmailError.innerHTML=info[index].correctemail;
     Email.innerHTML=info[index].email;
     PasswordError.innerHTML=info[index].correctPssword;
+
 });
 }
