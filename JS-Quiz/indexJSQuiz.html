@@ -6,45 +6,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./Home-JS-Quiz/style.css">
+    <script src="https://kit.fontawesome.com/41d0e79cb4.js" crossorigin="anonymous"></script>
    
     <title>Document</title>
 </head>
 <body>
-  <div class="m-4">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            
-            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse navbar1" id="navbarCollapse">
-                <div class="navbar-nav">
-                    <a href="#" class="nav-item nav-link active ">Home</a>
-                    
-                  
+  <nav class="navbar">
+    <span class="navbar-toggle" id="js-navbar-toggle">
+            <i class="fas fa-bars"></i>
+        </span>
+    <a href="#" class="logo"><img src="../../img/Layer_52.png" id="logo" alt=""></a>
+    <ul class="main-nav" id="js-menu">
+      <li>
+        <a href="../index.html" class="nav-links">Home</a>
 
-                </div>
-                
-            </div>
-        </div>
-    </nav>
-</div>
+    </ul>
+  </nav>
   <!-- *******End Navbar******* -->
-  <div id="bordeer">
+  <div id="bordeer" style="margin-top: 166px;" >
     <div class="container mt-5">
       <div class="d-flex justify-content-center row">
         <div class="col-md-10 col-lg-10">
           <div class="border">
-            <div class="question bg- p-3 border-bottom" style="background-color: #ddff00d0;">
+            <div class="question bg- p-3 border-bottom" style="background-color: #000000;">
               <div class="d-flex flex-row justify-content-between align-items-center mcq">
 
-                <h4 class="small-nav">HTML-Quiz</h4> <span id="quisnum"></span>
+                <h4 class="small-nav" style="color: white;">JavaScript-Quiz</h4> <span id="quisnum" style="color: white;"></span>
 
               </div>
             </div>
             <div class="question bg-white p-3 border-bottom">
               <div class="d-flex flex-row align-items-center question-title">
-                <h3 style="color: #ddff00d0;">Q.</h3>
+                <h3 style="color: #000000;">Q.</h3>
                 <div id="QuizContainer">
                   <p id="questions">questions</p>
               </div>
@@ -52,22 +46,22 @@
           </div>
           <div id="AnswersDiv" >
             <div class="ans ml-2" >
-              <input type="radio" id="firstop"> 
+              <input type="radio" id="firstop" name=" classes"> 
               <label id="answer1">answer1
             </label>
           </div>
            <div class="ans ml-2">
-             <input  type="radio" id="secop">
+             <input  type="radio" id="secop"  name=" classes">
             <label id="answer2">answer2
             </label>
           </div>
           <div class="ans ml-2">
-          <input type="radio" id="thirdop">
+          <input type="radio" id="thirdop"  name=" classes">
             <label id="answer3">answer3
             </label> 
           </div>
           <div class="ans ml-2">
-            <input  type="radio" id="fourop"> 
+            <input  type="radio" id="fourop"  name=" classes"> 
             <label id="answer4">answer4
           </label>
           </div>
@@ -78,7 +72,7 @@
         
         <div class="col-lg-4">
           <div class="counter"  class="timer" >
-            <div><span id="time">03:00</span> </div>
+            <div><span id="time" style="border: double black 5px ; padding: 10px;border-radius: 15px;">03:00</span> </div>
           </div>
         </div></div>
     </div>
@@ -99,11 +93,13 @@
   <!--********Start Footer********-->
 
 
-  <div class="container my-5">
+  
 
-    <div class="container my-5">
+<div >
 
-      <footer style="background-color: #000000;">
+  <div >
+
+      <footer style="background-color: black;margin-top: 248px;">
         <div class="container p-4">
           <div class="row">
             <div class="col-lg-3 col-md-6 mb-4">
@@ -113,7 +109,7 @@
                   <a href="#!" style="color: #4f4f4f;">@Follow</a>
                 </li>
                 <li class="mb-1">
-                  <a href="#!" style="color: #ee06ff;"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.linkedin.com/in/samar-alkhamis-942a92151/" target="_blank" style="color: #ee06ff;"><i class="fa-brands fa-linkedin-in"></i></a>
                 </li>
                 <li class="mb-1">
                   <a href="#!" style="color: #4f4f4f;">Contact</a>
@@ -130,7 +126,7 @@
                   <a href="#!" style="color: #4f4f4f;">@Follow</a>
                 </li>
                 <li class="mb-1">
-                  <a href="#!" style="color: #a600c7;"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.linkedin.com/in/hadi-alsaden-174408232/" target="_blank" style="color: #a600c7;"><i class="fa-brands fa-linkedin-in"></i></a>
                 </li>
                 <li class="mb-1">
                   <a href="#!" style="color: #4f4f4f;">Contact</a>
@@ -147,7 +143,7 @@
                   <a href="#!" style="color: #4f4f4f;">@Follow</a>
                 </li>
                 <li class="mb-1">
-                  <a href="#!" style="color: #610077;"><i class="fa-brands fa-linkedin-in"></i></a>
+                  <a href="https://www.linkedin.com/in/saja-al-ghalayini" target="_blank" style="color: #7f029b;"><i class="fa-brands fa-linkedin-in"></i></a>
                 </li>
                 <li class="mb-1">
                   <a href="#!" style="color: #4f4f4f;">Contact</a>
@@ -178,13 +174,14 @@
           </div>
         </div>
         <div class="text-center p-3" style="background-color: rgba(233, 233, 233, 0.2);">
-          Â© 2022 Copyright:
+          © 2022 Copyright:
           <a class="text-dark" href="#">Quizooo</a>
         </div>
         <!-- Copyright -->
       </footer>
     
     </div>
+  </div>
   </body>
   <!--********End Footer********-->
 </html>
