@@ -123,8 +123,10 @@
     }
     
     form .button{
-     height: 45px;
-     margin: 35px 220px;
+      height: 50px;
+      width: 80px;
+      margin: 35px 180px;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
     
     }
     form .button input{
