@@ -1,19 +1,7 @@
-let Name=document.getElementById("Name");
-function GetDataFromLocalStorage(){
-    let storageData=localStorage.getItem('formData');
-    let parsData=JSON.parse(storageData);
-    getName(parsData);
 
-}
-GetDataFromLocalStorage();
+let mainNav = document.getElementById("js-menu");
+let navBarToggle = document.getElementById("js-navbar-toggle");
 
-
-function getName(parsData){
-    console.log(parsData[0].fname);
-    parsData.map(function(i){
-
-        Name.innerHTML=`${i.fname}`;
-    })
-
-}
-
+navBarToggle.addEventListener("click", function() {
+  mainNav.classList.toggle("active");
+});

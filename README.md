@@ -15,7 +15,7 @@ hadialsaden@gmail.com
 ### Saja Al Ghalayini
 saja.ghalayini02@gmail.com
 #### [Saja's GitHub Link](https://github.com/saja-alghalayini)
-#### [Saja's  Linkedin ](www.linkedin.com/in/saja-al-ghalayini)
+#### [Saja's  Linkedin ](https://www.linkedin.com/in/saja-al-ghalayini)
 
 
 ### Samar Alkhamis

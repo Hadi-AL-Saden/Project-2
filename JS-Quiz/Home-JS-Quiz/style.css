@@ -96,7 +96,7 @@
         color: rgba(255, 255, 255, 1);
       }
     }
-  /* ********************************************************************************************** */ 
+
 
 
 #img{
@@ -104,7 +104,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  height: 800px;
+  height: 600px;
   width: 100%;
 }
 
@@ -116,24 +116,25 @@
 
 
   /* **********************************welcome*********************************************** */ 
-#Wbox{
-
-    width: 50%;
-    margin-left: 30%;
-    margin-top: 15%;
+  #Wbox{
+    width: 49%;
+    height: 382px;
+    margin-left: 24%;
+    margin-top: 2%;
     padding: 5%;
     background-color: #ffffff99;
-    opacity: 143%;
-}
+    opacity: 119%;
+  }
 
   /* **********************************Body*********************************************** */ 
 
 body {
     background-color:#ffffff;
   font-family: Arial, Helvetica, sans-serif;
-
  
 }
+
+
 
 /* *************************************Card******************************************** */
 .img{
@@ -141,50 +142,220 @@ body {
   height: 300px;
 } 
 
+.BS{
+  font-size: 35px;
+}
+
+.cardP{
+  font-size:35px;
+}
+.cardP2{
+  font-size:35px;
+}
+
+
+.flip-card {
+  background-color: transparent;   
+  width:300px;
+  height: 370px;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgb(0, 0, 0);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #fff;
+  color: black;
+}
+/* *************************************************************************** */
+.flip-card-back {
+  background-color: #52affb;
+  color: rgb(0, 0, 0);
+  transform: rotateY(180deg);
+}
+
+#flip-card-back-JS{
+    background-color: #f6ff00;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+}
+#bJ{
+  border: 1px white solid;
+  color: #ffffff;
+}
+#bJ:hover{
+  color: white;
+}
+
+#flip-card-back-HTML{
+    background-color: #ff7300;
+    color: rgb(0, 0, 0);
+    transform: rotateY(180deg);
+}
+/* ********************************************************************************** */
+                                      /* < Margin> Card's */
+
+/* JS-card */
+
+#JS-card{
+  margin-left: 379px;
+}
+
+
+
+
+.card-top{
+   
+    text-align: center;
+   
+  padding: 30px;
+}
+
+
+
+
+
+
+
+
+
 /* ***********************************************************screen 1024 PX************************************************************************* */
 
 
 @media screen and (max-width:1024px){
 
+  #JS-card{
+    margin-left: 291px;
 }
-#Wbox{
-  border: solid 7px #facdaf;
-  width: 60%;
-  height: 335px;
-  margin-left: 20%;
-  margin-top: 1%;
-  padding: 1%;
-  background-color: #ffffff99;
-  opacity: 74%;
 
+.card-top{
+   
+    text-align: center;
+  
+    padding: 30px;
+}
+
+#Wbox{
+  width: 49%;
+  height: 382px;
+  margin-left: 24%;
+  margin-top: 2%;
+  padding: 5%;
+  background-color: #ffffff99;
+  opacity: 119%;
+}
 }
 
 /* ***********************************************************screen 768 PX************************************************************************* */
 @media screen and (max-width:768px){
 
+  .BS{
+    font-size: 20px;
+    margin: 0;
+  }
+  
+
+  #JS-card{
+    margin-left: 174px;
+     
+}
+
+
+
+
+.card-top{
+   
+    text-align: center;
+    margin-top: 10%;
+    margin-left: 50px;
+}
+
 #Wbox{
   border: solid 7px #facdaf;
-  width: 100%;
+  width: 71%;
   height: 20%;
-  margin-left: 12%;
-  margin-top: 25%;
+  margin-left: 16%;
+  margin-top: 13%;
   padding: 3%;
   background-color: #ffffff99;
   opacity: 74%;
 }
+
 .img{
   width: 200px;
   height: 200px;
 } 
+    
+
+
+
+.flip-card {
+  background-color: transparent;   
+  width: 300px;
+  height: 370px;
+  perspective: 1000px;
 }
+.cardP{
+  font-size:35px;
+}
+.cardP2{
+  font-size:35px;
+}
+
+
+}
+
+
+
+/* ***********************************************************screen 425 PX************************************************************************* */
+
+
+
 /* ***********************************************************screen 425 PX************************************************************************* */
 @media screen and (max-width:426px){
  
-  #logo{
-    float: none;
 
-  }
- 
+    
+    .BS{
+      font-size: 20px;
+      margin: 0;
+    }
+      
+      #JS-card{
+        margin-top: 25px;
+        margin-left: 37px;
+         
+    }
+    
+  
+
+    .card-top{
+       
+      text-align: center;
+      margin-top: 1%;
+      margin-left: 112px;
+    }
+    
     #Wbox{
       border: solid 7px #facdaf;
       width: 96%;
@@ -200,9 +371,39 @@ body {
       height: 200px;
     } 
         
-   
-
+    
+    
+    
+    .flip-card {
+      background-color: transparent;   
+      width: 300px;
+      height: 370px;
+      perspective: 1000px;
+    }
+    .cardP{
+      font-size:35px;
+    }
+    .cardP2{
+      font-size:35px;
+    }
+    
   }
+/* ***********************************************************screen 375 PX************************************************************************* */
+@media screen and (max-width:376px){
+
+#JS-card {
+
+margin-left: 0px;
+
+}
+
+}
+
+
+
+
+
+
 
 /* ***********************************************************screen 320 PX************************************************************************* */
 @media screen and (max-width:320px){
@@ -213,7 +414,27 @@ body {
       float:none;
       
     }
-
+    
+    .BS{
+      font-size: 20px;
+      margin: 0;
+    }
+      
+      #JS-card{
+        margin-top: 25px;
+        margin-left: 8px ;
+         
+    }
+    
+    
+  
+    .card-top{
+       
+      text-align: center;
+      margin-top: 1%;
+      margin-left: 60px;
+    }
+    
     #Wbox{
       border: solid 7px #facdaf;
       width: 96%;
@@ -228,78 +449,25 @@ body {
       width: 200px;
       height: 200px;
     } 
-  } 
-
-
-  
-html, body {
-  width: 100%;
-  height:100%;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.d{
-  position: relative;
-  height: 50%;
-  width: 70%;
-  font: 1em Arial;
-  z-index: 1;
-  overflow: hidden;
-  border-radius: 10px;
-  box-shadow: 0px 5px 25px 0px rgb(0, 0, 0);
-}
-
-
-
-
-
-
-
-
-
-.wrapperr {
-    /*This part is important for centering*/
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-}
-
-.typing-demoo {
- 
-  width: 40ch;
-  animation: typing 2s steps(30), blink .5s step-end infinite alternate;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid;
-  font-family: monospace;
-  font-size: 2em;
-}
-@keyframes typing {
-  from {
- 
-    width: 0
-  }
-}
+        
     
-@keyframes blink {
-  
-  50% {   animation-delay: 10s;
-    transition-delay: 10s;
-    border-color: transparent
-  }
+    
+    
+    .flip-card {
+      background-color: transparent;   
+      width: 244px;
+      height: 370px;
+      perspective: 1000px;
+    }
+    .cardP{
+      font-size:35px;
+    }
+    .cardP2{
+      font-size:35px;
+    }
+    
+
+    
+
 }
+
