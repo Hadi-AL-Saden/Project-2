@@ -50,21 +50,32 @@
               </div>
             </div>
           </div>
-     
-    
-        <div class="d-flex flex-row  align-items-center p-3 bg-white" id="AnswersDiv" style="margin-left: -25px;">
-          <div class="ans ml-2" >
-            <button id="answer1" >answer1</button></div>
-         <div class="ans ml-2">
-         <button id="answer2" >answer2</button>
+          <div id="AnswersDiv" >
+            <div class="ans ml-2" >
+              <input type="radio" id="firstop"> 
+              <label id="answer1">answer1
+            </label>
+          </div>
+           <div class="ans ml-2">
+             <input  type="radio" id="secop">
+            <label id="answer2">answer2
+            </label>
+          </div>
+          <div class="ans ml-2">
+          <input type="radio" id="thirdop">
+            <label id="answer3">answer3
+            </label> 
+          </div>
+          <div class="ans ml-2">
+            <input  type="radio" id="fourop"> 
+            <label id="answer4">answer4
+          </label>
+          </div>
         </div>
-        <div class="ans ml-2"><button id="answer3" >answer3</button>
-        </div>
-        <div class="ans ml-2"><button id="answer4" >answer4</button>
-        </div></div>
-        <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
-        <!--**Next button-->
-        <button class="btn btn-next col-lg-2" type="submit"><a id="nxtBtn">Next</a></button>
+          <div class="d-flex flex-row justify-content-between align-items-center p-3 bg-white">
+          <!--**Next button-->
+          <button class="btn btn-dark" type="submit" id="btn-next" onclick="showNextQuestion()"><a id="nxtBtn">Next</a></button>
+        
         <div class="col-lg-4">
           <div class="counter"  class="timer" >
             <div><span id="time">03:00</span> </div>

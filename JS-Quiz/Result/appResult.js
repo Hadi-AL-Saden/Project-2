@@ -3,7 +3,7 @@ let score=document.getElementById('score');
 let tableanswer=document.getElementById("table");
 let correctAnswers=[3,4,1,2,1,3,4,1,1,2];
 tableanswer.style.display="none";
-
+let count=0;
 
 function GetDataFromLocalStorage(){
     let myData=localStorage.getItem('userAnswersjs');
@@ -22,11 +22,11 @@ function PassOrFail(parsemyData){
   console.log(parsemyData);
 if(parsemyData >=5 ){
    document.getElementById("pass or failed").src = "http://static1.squarespace.com/static/5f28c184953ab91a0dc0daed/5f28c7469963cd5b03781978/60b01099529e5174cb3d8fac/1622151687646/PASS+Logo+Stacked+Full+Color+-+2000x2000.png?format=1500w";
-   score.innerHTML= `your score is ${parsemyData}`;
+   score.innerHTML= `your score is ${count}`;
   }
   else{
     document.getElementById("pass or failed").src = "https://freepikpsd.com/file/2019/10/fail-icon-png-8-Transparent-Images.png";
-    score.innerHTML= ` your score is ${parsemyData}`;
+    score.innerHTML= ` your score is ${count}`;
   }
 }
 function render(parsemyData,parsemyDataAnswers){
@@ -39,6 +39,7 @@ function render(parsemyData,parsemyDataAnswers){
       tablerow.appendChild(tableData2);
 
         if(parsemyDataAnswers[i]==correctAnswers[i]){
+          count++
             tableData1.innerHTML ="Question " + (i+1) +" : " ;
             tableData2.textContent ="correct answers";
             tableData2.style.color="green";
