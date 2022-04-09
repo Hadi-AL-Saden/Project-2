@@ -22,6 +22,7 @@ let loginpass=document.getElementById("password");
         btn.href="../JS-Quiz/Home-JS-Quiz/index.html"; 
       }
   })
+  //samar
   
   if (loginemail.value == parsData[0].email){
     emailError.innerHTML="your email is correct";
