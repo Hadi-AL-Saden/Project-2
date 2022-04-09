@@ -1,4 +1,3 @@
-
 'use strict';
 let Questions= document.getElementById("questions");
 let answerOne= document.getElementById("answer1");
@@ -8,15 +7,20 @@ let answerFour=document.getElementById("answer4");
 let questionnum=document.getElementById("quisnum");
 let AnswersDiv=document.getElementById('AnswersDiv');
 let XQuestion=0;
-let correctAnswers=[1,3,3,3,4,2,2,1,4,1];
 let QuizContainer=document.getElementById("QuizContainer");
+let firstop=document.getElementById('firstop');
+let secop=document.getElementById('secop');
+let thirdop=document.getElementById('thirdop');
+let fourop=document.getElementById('fourop');
 let nxtBtn=document.getElementById('nxtBtn');
+let Next=document.getElementById("btn-next")
 let correctAnswerCount=0;
-let ChoosenAnswer=0;
 let userQuizAnswers=[];
 let x=[];
+let activebtn=0;
 
-let jsQuiz = [{
+
+let cssQuiz = [{
     questions: "Which HTML tag is used to define an internal style sheet?",
     choices: ["style", "css", "script", "link"],
     correctAnswer:"style&g",
@@ -68,84 +72,73 @@ let jsQuiz = [{
     questionnumber:"10 of 10"
 }];
 
-/*To start the quize */
 intitalization();
 
 function intitalization(){
 quizBeginning();
-    AnswersDiv.addEventListener('click',function(event){
-    let buttonClicked=event.target;
-  checkAnswer(buttonClicked.innerText);
-   
-})  
 }
 
-/*To start the quiz */
 function quizBeginning(){
-    questionText(jsQuiz[0]);
-}
+    Questions.innerHTML=cssQuiz[0].questions;
+    questionnum.innerHTML=cssQuiz[0].questionnumber;
+    answerOne.innerHTML=cssQuiz[0].choices[0];
+    answerTwo.innerHTML=cssQuiz[0].choices[1];
+    answerThree.innerHTML=cssQuiz[0].choices[2];
+    answerFour.innerHTML=cssQuiz[0].choices[3];
+    Next.disabled=true;
 
+    }
+  
 function checkAnswer(userAnswers){
-    if(userAnswers == jsQuiz[XQuestion].correctAnswer){ //To check the correct answer by comparing it with the answer in the jsQuiz array
-        correctAnswerCount=correctAnswerCount+1; // calculate the correct answers
+    if(userAnswers == cssQuiz[XQuestion].correctAnswer){ 
+        correctAnswerCount=correctAnswerCount+1;
         console.log('the counter is:', correctAnswerCount);
     }
-
-    //getUserAnswers();
-   // console.log('the cgossed anser is',getUserAnswers());
-    showNextQuestion();
     return correctAnswerCount;
     
 }
-console.log('hi'+correctAnswerCount);
+
 function showNextQuestion(){
-    if(XQuestion==jsQuiz.length-1){
-        nxtBtn.style.display='block'; // to show the next button that will take me to result page
+    if(XQuestion==cssQuiz.length-1){
+        nxtBtn.style.display='block'; 
         nxtBtn.href="./reuslt css/indexResult.html";
     }
     else{
-        XQuestion++;
-       questionText(jsQuiz[XQuestion]);
-       //To bring the question and its answers
+        enableButton();
     }
     LocalStorageFrom();
 }
-function questionText(question){//To bring the question and its answers
-Questions.innerHTML=question.questions;
-questionnum.innerHTML=question.questionnumber;
-answerOne.innerHTML=question.choices[0];
-answerTwo.innerHTML=question.choices[1];
-answerThree.innerHTML=question.choices[2];
-answerFour.innerHTML=question.choices[3];
-}
 
-/*To store the anserws values */
-answerOne.addEventListener('click',function(e){
-   ChoosenAnswer=1;
-   //console.log(ChoosenAnswer);
-   console.log(userQuizAnswers);
+firstop.addEventListener('click',function(e){
     userQuizAnswers.push(1);
-   console.log(userQuizAnswers);
-
+    Next.disabled=false;
 })
-answerTwo.addEventListener('click',function(e){
-    ChoosenAnswer=2;
-   
+secop.addEventListener('click',function(e){
     userQuizAnswers.push(2);
+    Next.disabled=false;
  })
- answerThree.addEventListener('click',function(e){
-    ChoosenAnswer=3;
-  userQuizAnswers.push(3);
+thirdop.addEventListener('click',function(e){
+    userQuizAnswers.push(3);
+    Next.disabled=false;
  })
- answerFour.addEventListener('click',function(e){
-    ChoosenAnswer=4;
-   
+ fourop.addEventListener('click',function(e){
     userQuizAnswers.push(4);
+    Next.disabled=false;
  })
-console.log(userQuizAnswers);
-console.log('the answers', correctAnswerCount);
 
-/*Local storage */
+ function enableButton(){
+    XQuestion++;
+    Questions.innerHTML=cssQuiz[XQuestion].questions;
+    answerOne.innerHTML=cssQuiz[XQuestion].choices[0];
+    answerTwo.innerHTML=cssQuiz[XQuestion].choices[1];
+    answerThree.innerHTML=cssQuiz[XQuestion].choices[2];
+    answerFour.innerHTML=cssQuiz[XQuestion].choices[3];
+    questionnum.innerHTML=cssQuiz[XQuestion].questionnumber;
+    Next.disabled=true;
+    firstop.checked = false;
+    secop.checked = false;
+    thirdop.checked = false;
+ }
 function LocalStorageFrom(){
     console.log(correctAnswerCount);
     let array=JSON.stringify(correctAnswerCount);
