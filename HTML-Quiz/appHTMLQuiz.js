@@ -78,18 +78,18 @@ quizBeginning();
 }
 
 function quizBeginning(){
-    Questions.innerHTML=cssQuiz[0].questions;
-    questionnum.innerHTML=cssQuiz[0].questionnumber;
-    answerOne.innerHTML=cssQuiz[0].choices[0];
-    answerTwo.innerHTML=cssQuiz[0].choices[1];
-    answerThree.innerHTML=cssQuiz[0].choices[2];
-    answerFour.innerHTML=cssQuiz[0].choices[3];
+    Questions.innerHTML=HtmlQuiz[0].questions;
+    questionnum.innerHTML=HtmlQuiz[0].questionnumber;
+    answerOne.innerHTML=HtmlQuiz[0].choices[0];
+    answerTwo.innerHTML=HtmlQuiz[0].choices[1];
+    answerThree.innerHTML=HtmlQuiz[0].choices[2];
+    answerFour.innerHTML=HtmlQuiz[0].choices[3];
     Next.disabled=true;
 
     }
   
 function checkAnswer(userAnswers){
-    if(userAnswers == cssQuiz[XQuestion].correctAnswer){ 
+    if(userAnswers == HtmlQuiz[XQuestion].correctAnswer){ 
         correctAnswerCount=correctAnswerCount+1;
         console.log('the counter is:', correctAnswerCount);
     }
@@ -98,7 +98,7 @@ function checkAnswer(userAnswers){
 }
 
 function showNextQuestion(){
-    if(XQuestion==cssQuiz.length-1){
+    if(XQuestion==HtmlQuiz.length-1){
         nxtBtn.style.display='block'; 
         nxtBtn.href="./reuslt css/indexResult.html";
     }
@@ -127,12 +127,12 @@ thirdop.addEventListener('click',function(e){
 
  function enableButton(){
     XQuestion++;
-    Questions.innerHTML=cssQuiz[XQuestion].questions;
-    answerOne.innerHTML=cssQuiz[XQuestion].choices[0];
-    answerTwo.innerHTML=cssQuiz[XQuestion].choices[1];
-    answerThree.innerHTML=cssQuiz[XQuestion].choices[2];
-    answerFour.innerHTML=cssQuiz[XQuestion].choices[3];
-    questionnum.innerHTML=cssQuiz[XQuestion].questionnumber;
+    Questions.innerHTML=HtmlQuiz[XQuestion].questions;
+    answerOne.innerHTML=HtmlQuiz[XQuestion].choices[0];
+    answerTwo.innerHTML=HtmlQuiz[XQuestion].choices[1];
+    answerThree.innerHTML=HtmlQuiz[XQuestion].choices[2];
+    answerFour.innerHTML=HtmlQuiz[XQuestion].choices[3];
+    questionnum.innerHTML=HtmlQuiz[XQuestion].questionnumber;
     Next.disabled=true;
     firstop.checked = false;
     secop.checked = false;
